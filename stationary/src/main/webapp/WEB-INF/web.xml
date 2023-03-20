@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE web-app PUBLIC '-//Sun Microsystems, Inc.//DTD Web 
+     Application 2.3//EN' 'http://java.sun.com/dtd/web-app_2_3.dtd'>
+
+<web-app>
+   
+	<servlet>
+		<servlet-name>main</servlet-name>
+		<servlet-class>Servlet.main</servlet-class>
+		<load-on-startup>0</load-on-startup>
+	</servlet>
+	
+	
+	<filter>
+		<filter-name>Authendication</filter-name>
+		<filter-class>Filter.AuthendicationFilter</filter-class>
+	</filter>
+	
+	<filter-mapping>
+		<filter-name>Authendication</filter-name>
+		<url-pattern>/Product/*</url-pattern>
+	</filter-mapping>
+	
+</web-app>
+          

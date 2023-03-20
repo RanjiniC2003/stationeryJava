@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Product</title>
+<link href="main.css" rel="stylesheet" type="text/css">
+</head>
+<body onload="viewproduct()">
+	<div id="stationaryContainer" class="stationaryContainer">
+		<div class="header">
+			<p>Stationary</p>
+			<div>
+			   <div id="addProduct" onclick="addProduct()">Add product</div>
+			   <div id="updateProduct" onclick="updateProduct()">Update product</div>
+			   <div id="addCart" onclick="addCart()">Cart</div>
+			   <div id="logOut" onclick="logOut()">Log out</div>
+			</div>
+		</div>
+		<div class="stationaryContent">
+			<div class="productHead" id="productHead">
+				 <p class="productNameHead">Product name</p>
+				 <!-- <p class="starHead">Star</p> -->
+				 <p class="priceHead">Price</p>
+				 <p class="quentityHead">Quantity</p>
+			</div>
+			<div class="productList" id="productList"></div>
+		</div>
+	</div>
+	
+	
+	<div id="updateProductPopUp" class="updateProductPopUp">
+	    <p>Product Name</p>
+	    <br>
+		<select id="updateProductName" name="updateProductName"></select>
+		<br>
+		<p>Price</p>
+		<input type="number" id="updatePrice" name="updatePrice">
+		<br>
+		<p>Quantity</p>
+		<input type="number" id="updateQuantity" name="updateQuantity">	
+		<br>
+		<div>
+		   <div id="updateDatasInProduct" class="updateDatasInProduct" onclick="updateDatasInProduct()">Apply</div>
+		   <div id="updateCancel" class="updateCancel" onclick="updateCancel()">Cancel</div>
+	    </div>
+	</div>
+	
+	
+	<div id="addProductPopUp" class="addProductPopUp">
+		<p>Product Name</p>
+	    <br>
+		<input id="addProductName" name="addProductName"/>
+		<br>
+		<p>Price</p>
+		<input type="number" id="addPrice" name="addPrice">
+		<br>
+		<p>Quantity</p>
+		<input type="number" id="addQuantity" name="addQuantity">	
+		<br>
+		<div>
+		   <div id="addDatasInProduct" class="addDatasInProduct" onclick="addDatasInProduct()">Apply</div>
+		   <div id="addCancel" class="addCancel" onclick="addCancel()">Cancel</div>
+	    </div>
+	
+	</div>
+	
+	<div id="addCardPopUp" class="addCardPopUp">
+		<div id="cartSelectList" class="cartSelectList"></div>
+		<div class="cartButton" id="cartButton">
+			<div class="cartAddButton" id="cartAddButton" onclick="cartAddButton()">Buy now</div>
+			<div class="cartBackButton" id="cartBackButton" onclick="cartBackButton()">Back</div>
+			<div class="cartCancelButton" id="cartCancelButton" onclick="cartCancelButton()">Cancel</div>
+		</div>
+		
+	</div>
+	
+	<script type="text/javascript" src="main.js"></script>
+</body>
+</html>
